@@ -118,6 +118,7 @@ body {
 .filter-button:hover {
     color: #FFFFFF;
     background-color: #404BBF;
+    cursor: pointer;
 }
 
 .end-page {

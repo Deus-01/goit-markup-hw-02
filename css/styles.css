@@ -115,6 +115,11 @@ body {
   color: var(--accent-color);
 }
 
+.filter-button:hover {
+    color: #FFFFFF;
+    background-color: #404BBF;
+}
+
 .end-page {
   color: #e7e9fc;
 }

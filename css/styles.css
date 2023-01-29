@@ -2,35 +2,67 @@
   --accent-color: #4d5ae5;
   --main-color: #2e2f42;
   --text-color: #434455;
+  --bgc: #ffffff;
+  --secondbgc: #F4F4FD;
+  --secondbgcbtn: #404BBF;
 }
 
 .accent {
   color: var(--accent-color);
 }
-/* body */
+/*--------------------- body */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: roboto, sans-serif;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--text-color);
+  background-color: var(--bgc);
 }
-/* head */
+/*--------------------- head */
 
-.contacts a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-style: normal;
+.container.head,
+.nav-head {
+  align-items: center;
 }
+
+.link.current {
+  color: var(--text-color);
+  background-color: rgba(109, 106, 106, 0.116);
+}
+
+/*--------------------- logo */
 
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -39,7 +71,11 @@ body {
   line-height: 1.33;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
+  color: var(--main-color);
 }
+
+/*--------------------- navigation */
 
 .nav-style {
   font-weight: 500;
@@ -48,29 +84,117 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Main */
+.nav-style + .nav-style {
+  margin-left: 40px;
+}
+.link:hover, .link:focus {
+  color: var(--text-color);
+}
+.link:active {
+  color: var(--accent-color);
+}
+.link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: var(--main-color);
+}
+
+/*--------------------- address */
+
+.contacts,
+.nav-head,
+.site-nav,
+.container.head {
+  display: flex;
+}
+
+.contacts a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-style: normal;
+}
+
+.address {
+  display: flex;
+  margin-left: auto;
+}
+
+.call + .call {
+  margin-left: 40px;
+}
+
+/*--------------------- Main */
 .hero {
-    background-color: rgba(46, 47, 66, 0.7);
+  background-color: #2E2F42;
+  text-align: center;
 }
 .hero-text {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   letter-spacing: 0.02em;
   color: #ffffff;
+  margin-bottom: 48px;
+  display: flex;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.hero > .container {
+  padding: 188px 0;
+  text-align: center;
 }
 
 .hero-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
+  padding: 16px 32px;
+  
 
   color: #ffffff;
   background-color: #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+}
+
+.hero-button:active {
+  background-color: var(--secondbgcbtn);
+
+}
+
+.hero-button:hover, .hero-button:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+/* --------------------- Features */
+.our-features {
+  padding-top: 120px;
+}
+
+.future-block {
+  display: flex;
+}
+
+.future-block .item {
+  width: 264px;
+}
+
+.future-block .head-name {
+  margin-bottom: 8px;
+  font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.future-text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .head-name,
@@ -82,45 +206,163 @@ body {
   color: var(--main-color);
 }
 
-.team-list .head-name,
-.position {
-  text-align: center;
+/*--------------------- What we are doing */
+
+.wwad {
+  padding-bottom: 72px;
+}
+
+.what {
+  padding: 120px 0;
+}
+
+.what-pict {
+  display: flex;
+}
+
+.what-pict .item {
+
+}
+
+.item + .item {
+  margin-left: 24px;
 }
 
 .features,
 .wwad,
 .our-team {
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--main-color);
+  padding-bottom: 72px;
+}
+/*--------------------- Our team */
+
+.our {
+  padding: 120px 0;
+  background-color: var(--secondbgc);
 }
 
-/* Portfolio */
+.our-teamlist {
+  display: flex;
+}
 
-/* Filter */
+.team-list + .team-list {
+  margin-left: 24px;
+}
+
+.team-list .head-name {
+  padding-top: 32px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.team-list .position {
+  padding-top: 8px;
+  padding-bottom: 32px;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+}
+
+
+/*--------------------- Footer */
+
+.footer {
+  padding: 100px 0;
+  background-color: var(--main-color);
+}
+
+.end-page {
+  color: #e7e9fc;
+  max-width: 264px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.logo-end {
+  font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/*--------------------- Portfolio */
+
+/*--------------------- Filter */
 
 .filter-button {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.04em;
   color: var(--accent-color);
+  background-color: #E7E9FC;
+  border: 1px solid #F4F4FD;
+  border-radius: 4px;
+  padding: 12px 24px;
 }
 
 .filter-button:hover {
-    color: #FFFFFF;
-    background-color: #404BBF;
-    cursor: pointer;
+  color: #ffffff;
+  background-color: #404bbf;
+  cursor: pointer;
+  transition: 1s;
 }
 
-.end-page {
-  color: #e7e9fc;
+.buttons + .buttons {
+  margin-left: 24px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-top: 96px;
+}
+
+/*--------------------- Main */
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 72px;
+  margin-bottom: 120px;
+}
+
+.cards {
+  margin-right: 21px;
+  margin-bottom: 48px;
+  border: 1px solid #E7E9FC;
+}
+
+.project-name {
+  margin-top: 32px;
+  padding-left: 16px;
+}
+
+.project-text {
+  line-height: 1.5px;
+  letter-spacing: 0.02em;
+  margin-top: 15px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+}
+
+.cards:nth-child(3n) {
+  margin-right: 0;
+}
+
+.cards:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
